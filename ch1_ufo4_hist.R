@@ -1,4 +1,4 @@
-# ch1_ufo3.R
+# ch1_ufo4_hist.R
 # 
 # Author: prhodes
 ###############################################################################
@@ -53,7 +53,7 @@ ufo.us <- subset( ufo, !is.na( USState))
 summary( ufo.us$DateOccurred)
 
 quick.hist = ggplot( ufo.us, aes(x=DateOccurred))+geom_histogram()+
-		scale_x_date(breaks = "70 years")
+		scale_x_date(breaks = "45 years")
 
 ggsave(plot=quick.hist, filename="/home/prhodes/Desktop/ufo_plot.png", height=6, width=15)
 
